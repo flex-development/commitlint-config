@@ -1152,7 +1152,7 @@ __metadata:
     "@commitlint/lint": "npm:17.4.4"
     "@commitlint/types": "npm:17.4.4"
     "@flex-development/mkbuild": "npm:1.0.0-alpha.13"
-    "@flex-development/mlly": "npm:1.0.0-alpha.11"
+    "@flex-development/mlly": "npm:1.0.0-alpha.13"
     "@flex-development/pathe": "npm:1.0.3"
     "@flex-development/tutils": "npm:6.0.0-alpha.10"
     "@graphql-eslint/eslint-plugin": "npm:3.16.0"
@@ -1366,6 +1366,24 @@ __metadata:
     "@types/node": ">=14.17.0"
     node-fetch: ">=3.3.0"
   checksum: 8f7843719a5002f73bac76b250168e7a9092b2e093c8566c379b396de6f12af84243b54a4401bb76fdd58c2b455d942455e777bc6bb6c407910eb61d962d4aac
+  languageName: node
+  linkType: hard
+
+"@flex-development/mlly@npm:1.0.0-alpha.13":
+  version: 1.0.0-alpha.13
+  resolution: "@flex-development/mlly@npm:1.0.0-alpha.13::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fmlly%2F1.0.0-alpha.13%2F8659ffd4c1af48e0a3de458955d2b6b068e79a08"
+  dependencies:
+    "@flex-development/errnode": "npm:1.5.0"
+    "@flex-development/export-regex": "npm:1.0.0"
+    "@flex-development/import-regex": "npm:2.0.1"
+    "@flex-development/is-builtin": "npm:2.0.0"
+    "@flex-development/pathe": "npm:1.0.3"
+    "@flex-development/pkg-types": "npm:2.0.0"
+    "@flex-development/tutils": "npm:6.0.0-alpha.10"
+  peerDependencies:
+    "@types/node": ">=14.17.0"
+    node-fetch: ">=3.3.0"
+  checksum: 1f0b0790db39a4cebbccce7ee621ddb587b7fb35d4c58945793b7c271946f0bcf0163ef88f46380c825f62550cc542790e910dfc5541c1c0365971a8491e8dd7
   languageName: node
   linkType: hard
 
