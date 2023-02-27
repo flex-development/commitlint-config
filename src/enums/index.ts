@@ -4,3 +4,4 @@
  */
 
 export { default as PromptKind } from './kind-prompt'
+export { default as ReferenceAction } from './reference-action'
