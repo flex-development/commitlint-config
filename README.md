@@ -19,6 +19,9 @@ Shareable [`commitlint`][1] config enforcing [conventional commits][2]
 - [Use](#use)
 - [API](#api)
 - [Types](#types)
+  - [Enums](#enums)
+  - [Interfaces](#interfaces)
+  - [Type Definitions](#type-definitions)
 - [Contribute](#contribute)
 
 ## What is this?
@@ -63,6 +66,32 @@ yarn add -D @flex-development/commitlint-config@flex-development/commitlint-conf
 ## Types
 
 This package is fully typed with [TypeScript][7].
+
+### Enums
+
+- [`PromptKind`](src/enums/kind-prompt.ts)
+- [`ReferenceAction`](src/enums/reference-action.ts)
+- [`Scope`](src/enums/scope.ts)
+- [`Type`](src/enums/type.ts)
+
+### Interfaces
+
+- [`Commit`](src/interfaces/commit.ts)
+- [`Config`](src/interfaces/config.ts)
+- [`Note`](src/interfaces/note.ts)
+- [`ParserOptions`](src/interfaces/options-parser.ts)
+- [`PromptConfig`](src/interfaces/config-prompt.ts)
+- [`Reference`](src/interfaces/reference.ts)
+- [`Revert`](src/interfaces/revert.ts)
+- [`RulesConfig`](src/interfaces/config-rules.ts)
+
+### Type Definitions
+
+- [`NoteKeyword`](src/types/note-keyword.ts)
+- [`ParserPreset`](src/types/parser-preset.ts)
+- [`QuestionEnum`](src/types/question-enum.ts)
+- [`Question`](src/types/question.ts)
+- [`Questions`](src/types/questions.ts)
 
 ## Contribute
 
