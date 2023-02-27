@@ -5,3 +5,4 @@
 
 export { default as PromptKind } from './kind-prompt'
 export { default as ReferenceAction } from './reference-action'
+export { default as Scope } from './scope'
