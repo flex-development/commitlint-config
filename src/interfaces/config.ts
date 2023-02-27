@@ -79,8 +79,7 @@ interface Config extends Required<Omit<commitlint.UserConfig, 'extends'>> {
   /**
    * Commit rules.
    *
-   * Enforces [conventional commits][1], with the exception of additional casing
-   * rules for consistency.
+   * Enforces [conventional commits][1].
    *
    * [1]: https://www.conventionalcommits.org
    *

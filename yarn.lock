@@ -1183,6 +1183,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:5.53.0"
     "@vates/toggle-scripts": "npm:1.0.0"
     "@vitest/coverage-c8": "npm:0.29.1"
+    "@vitest/expect": "npm:0.29.1"
     "@vitest/ui": "npm:0.29.1"
     add-stream: "npm:1.0.0"
     chai: "npm:4.3.7"

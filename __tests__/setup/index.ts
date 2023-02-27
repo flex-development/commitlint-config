@@ -4,4 +4,5 @@
  */
 
 import './chai'
+import './matchers'
 import './serializers'

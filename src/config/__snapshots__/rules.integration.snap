@@ -1,0 +1,282 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`integration:config/rules > @commitlint/lint > body-full-stop > should error if body ends with "." 1`] = `
+[
+  {
+    "level": 2,
+    "message": "body may not end with full stop",
+    "name": "body-full-stop",
+    "valid": false,
+  },
+]
+`;
+
+exports[`integration:config/rules > @commitlint/lint > body-leading-blank > should warn if body does not have leading blank line 1`] = `
+[
+  {
+    "level": 1,
+    "message": "body must have leading blank line",
+    "name": "body-leading-blank",
+    "valid": false,
+  },
+]
+`;
+
+exports[`integration:config/rules > @commitlint/lint > footer-leading-blank > should warn if footer does not have leading blank line 1`] = `
+[
+  {
+    "level": 1,
+    "message": "footer must have leading blank line",
+    "name": "footer-leading-blank",
+    "valid": false,
+  },
+]
+`;
+
+exports[`integration:config/rules > @commitlint/lint > header-full-stop > should error if header ends with "." 1`] = `
+[
+  {
+    "level": 2,
+    "message": "header may not end with full stop",
+    "name": "header-full-stop",
+    "valid": false,
+  },
+  {
+    "level": 2,
+    "message": "subject may not end with full stop",
+    "name": "subject-full-stop",
+    "valid": false,
+  },
+]
+`;
+
+exports[`integration:config/rules > @commitlint/lint > header-max-length > should error if header is longer than maximum length 1`] = `
+[
+  {
+    "level": 2,
+    "message": "header must not be longer than 100 characters, current length is 133",
+    "name": "header-max-length",
+    "valid": false,
+  },
+]
+`;
+
+exports[`integration:config/rules > @commitlint/lint > scope-case > should error on invalid scope casing 1`] = `
+[
+  {
+    "level": 2,
+    "message": "scope must be kebab-case, lower-case",
+    "name": "scope-case",
+    "valid": false,
+  },
+  {
+    "level": 2,
+    "message": "scope must be one of [build, cjs, cli, components, config, controllers, decorators, deps, deps-bundle, deps-dev, deps-opt, deps-peer, dtos, entities, enums, esm, exceptions, exports, factories, filters, github, guards, hooks, hybrid, install, interceptors, interfaces, internal, lib, loader, middleware, mixins, models, modules, namespaces, node, nvm, patches, pipes, pkg, plugins, ponyfill, props, providers, public, regex, release, rules, scripts, services, spelling, storybook, styles, subdomains, tests, ts, ts-next, types, utils, vercel, vite, vscode, workflows, yarn]",
+    "name": "scope-enum",
+    "valid": false,
+  },
+]
+`;
+
+exports[`integration:config/rules > @commitlint/lint > scope-enum > should error on invalid scope 1`] = `
+[
+  {
+    "level": 2,
+    "message": "scope must be one of [build, cjs, cli, components, config, controllers, decorators, deps, deps-bundle, deps-dev, deps-opt, deps-peer, dtos, entities, enums, esm, exceptions, exports, factories, filters, github, guards, hooks, hybrid, install, interceptors, interfaces, internal, lib, loader, middleware, mixins, models, modules, namespaces, node, nvm, patches, pipes, pkg, plugins, ponyfill, props, providers, public, regex, release, rules, scripts, services, spelling, storybook, styles, subdomains, tests, ts, ts-next, types, utils, vercel, vite, vscode, workflows, yarn]",
+    "name": "scope-enum",
+    "valid": false,
+  },
+]
+`;
+
+exports[`integration:config/rules > @commitlint/lint > scope-max-length > should error if scope is longer than maximum length 1`] = `
+[
+  {
+    "level": 2,
+    "message": "scope must be one of [build, cjs, cli, components, config, controllers, decorators, deps, deps-bundle, deps-dev, deps-opt, deps-peer, dtos, entities, enums, esm, exceptions, exports, factories, filters, github, guards, hooks, hybrid, install, interceptors, interfaces, internal, lib, loader, middleware, mixins, models, modules, namespaces, node, nvm, patches, pipes, pkg, plugins, ponyfill, props, providers, public, regex, release, rules, scripts, services, spelling, storybook, styles, subdomains, tests, ts, ts-next, types, utils, vercel, vite, vscode, workflows, yarn]",
+    "name": "scope-enum",
+    "valid": false,
+  },
+  {
+    "level": 2,
+    "message": "scope must not be longer than 12 characters",
+    "name": "scope-max-length",
+    "valid": false,
+  },
+]
+`;
+
+exports[`integration:config/rules > @commitlint/lint > scope-min-length > should error if scope is shorter than minimum length 1`] = `
+[
+  {
+    "level": 2,
+    "message": "scope must be one of [build, cjs, cli, components, config, controllers, decorators, deps, deps-bundle, deps-dev, deps-opt, deps-peer, dtos, entities, enums, esm, exceptions, exports, factories, filters, github, guards, hooks, hybrid, install, interceptors, interfaces, internal, lib, loader, middleware, mixins, models, modules, namespaces, node, nvm, patches, pipes, pkg, plugins, ponyfill, props, providers, public, regex, release, rules, scripts, services, spelling, storybook, styles, subdomains, tests, ts, ts-next, types, utils, vercel, vite, vscode, workflows, yarn]",
+    "name": "scope-enum",
+    "valid": false,
+  },
+  {
+    "level": 2,
+    "message": "scope must not be shorter than 2 characters",
+    "name": "scope-min-length",
+    "valid": false,
+  },
+]
+`;
+
+exports[`integration:config/rules > @commitlint/lint > signed-off-by > should error without sign off 1`] = `
+[
+  {
+    "level": 2,
+    "message": "message must be signed off",
+    "name": "signed-off-by",
+    "valid": false,
+  },
+  {
+    "level": 2,
+    "message": "message must have \`Signed-off-by:\` trailer",
+    "name": "trailer-exists",
+    "valid": false,
+  },
+]
+`;
+
+exports[`integration:config/rules > @commitlint/lint > subject-empty > should error on missing subject 1`] = `
+[
+  {
+    "level": 2,
+    "message": "subject may not be empty",
+    "name": "subject-empty",
+    "valid": false,
+  },
+  {
+    "level": 2,
+    "message": "type may not be empty",
+    "name": "type-empty",
+    "valid": false,
+  },
+]
+`;
+
+exports[`integration:config/rules > @commitlint/lint > subject-full-stop > should error if subject ends with "." 1`] = `
+[
+  {
+    "level": 2,
+    "message": "header may not end with full stop",
+    "name": "header-full-stop",
+    "valid": false,
+  },
+  {
+    "level": 2,
+    "message": "subject may not end with full stop",
+    "name": "subject-full-stop",
+    "valid": false,
+  },
+]
+`;
+
+exports[`integration:config/rules > @commitlint/lint > subject-min-length > should error if subject is shorter than minimum length 1`] = `
+[
+  {
+    "level": 2,
+    "message": "subject must not be shorter than 2 characters",
+    "name": "subject-min-length",
+    "valid": false,
+  },
+]
+`;
+
+exports[`integration:config/rules > @commitlint/lint > trailer-exists > should error on missing "Signed-off-by" trailer 1`] = `
+[
+  {
+    "level": 2,
+    "message": "message must be signed off",
+    "name": "signed-off-by",
+    "valid": false,
+  },
+  {
+    "level": 2,
+    "message": "message must have \`Signed-off-by:\` trailer",
+    "name": "trailer-exists",
+    "valid": false,
+  },
+]
+`;
+
+exports[`integration:config/rules > @commitlint/lint > type-case > should error on invalid type casing 1`] = `
+[
+  {
+    "level": 2,
+    "message": "type must be lower-case",
+    "name": "type-case",
+    "valid": false,
+  },
+  {
+    "level": 2,
+    "message": "type must be one of [build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test, wip]",
+    "name": "type-enum",
+    "valid": false,
+  },
+]
+`;
+
+exports[`integration:config/rules > @commitlint/lint > type-empty > should error on missing type 1`] = `
+[
+  {
+    "level": 2,
+    "message": "subject may not be empty",
+    "name": "subject-empty",
+    "valid": false,
+  },
+  {
+    "level": 2,
+    "message": "type may not be empty",
+    "name": "type-empty",
+    "valid": false,
+  },
+]
+`;
+
+exports[`integration:config/rules > @commitlint/lint > type-enum > should error on invalid type 1`] = `
+[
+  {
+    "level": 2,
+    "message": "type must be one of [build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test, wip]",
+    "name": "type-enum",
+    "valid": false,
+  },
+]
+`;
+
+exports[`integration:config/rules > @commitlint/lint > type-max-length > should error if type is longer than maximum length 1`] = `
+[
+  {
+    "level": 2,
+    "message": "type must be one of [build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test, wip]",
+    "name": "type-enum",
+    "valid": false,
+  },
+  {
+    "level": 2,
+    "message": "type must not be longer than 8 characters",
+    "name": "type-max-length",
+    "valid": false,
+  },
+]
+`;
+
+exports[`integration:config/rules > @commitlint/lint > type-min-length > should error if type is shorter than minimum length 1`] = `
+[
+  {
+    "level": 2,
+    "message": "type must be one of [build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test, wip]",
+    "name": "type-enum",
+    "valid": false,
+  },
+  {
+    "level": 2,
+    "message": "type must not be shorter than 2 characters",
+    "name": "type-min-length",
+    "valid": false,
+  },
+]
+`;
