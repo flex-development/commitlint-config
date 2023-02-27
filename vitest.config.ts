@@ -52,7 +52,12 @@ const config: UserConfigExport = defineConfig((): UserConfig => {
         all: !LINT_STAGED,
         clean: true,
         cleanOnRerun: true,
-        exclude: ['**/__mocks__/**', '**/__tests__/**', '**/index.ts'],
+        exclude: [
+          '**/__mocks__/**',
+          '**/__tests__/**',
+          '**/index.ts',
+          'src/types/'
+        ],
         extension: ['.ts'],
         ignoreClassMethods: [],
         include: ['src'],
