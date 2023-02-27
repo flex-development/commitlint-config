@@ -23,7 +23,9 @@ Shareable [`commitlint`][1] config enforcing [conventional commits][2]
 
 ## What is this?
 
-**TODO**: package overview.
+This package exports a shareable [`commitlint`][1] configuration that enforces [conventional commits][2].
+
+It also includes a set of utilities for customizing rules.
 
 ## When should I use this?
 
