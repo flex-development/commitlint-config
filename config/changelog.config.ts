@@ -8,6 +8,11 @@
  * @see https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/git-raw-commits
  */
 
+import {
+  Type,
+  parserPreset,
+  type Commit
+} from '@flex-development/commitlint-config'
 import pathe from '@flex-development/pathe'
 import { CompareResult, isNIL } from '@flex-development/tutils'
 import addStream from 'add-stream'
@@ -17,7 +22,7 @@ import type {
   CommitGroup,
   GeneratedContext
 } from 'conventional-changelog-writer'
-import type { Commit, ICommit } from 'conventional-commits-parser'
+import type { ICommit } from 'conventional-commits-parser'
 import dateformat from 'dateformat'
 import type mri from 'mri'
 import {
@@ -136,7 +141,8 @@ sade('changelog', true)
      *
      * @const {Readable} changelog
      */
-    const changelog: Readable = conventionalChangelog(
+    // @ts-expect-error type definitions are incorrect
+    const changelog: Readable = conventionalChangelog<Commit>(
       {
         append: false,
         debug: debug ? console.debug.bind(console) : undefined,
@@ -147,24 +153,23 @@ sade('changelog', true)
             ? !!outputUnreleased.trim()
             : false,
         pkg: { path: pathe.resolve('package.json') },
-        // @ts-expect-error ts(2322)
         preset: {
           header: '',
-          name: 'conventionalcommits',
+          name: parserPreset.name,
           releaseCommitMessageFormat: 'release: {{currentTag}}',
           types: [
-            { section: ':package: Build', type: 'build' },
-            { section: ':house_with_garden: Housekeeping', type: 'chore' },
-            { section: ':robot: Continuous Integration', type: 'ci' },
-            { section: ':pencil: Documentation', type: 'docs' },
-            { section: ':sparkles: Features', type: 'feat' },
-            { section: ':bug: Fixes', type: 'fix' },
-            { section: ':fire: Performance Improvements', type: 'perf' },
-            { section: ':zap: Refactors', type: 'refactor' },
-            { section: ':rewind: Reverts', type: 'revert' },
-            { hidden: true, type: 'style' },
-            { section: ':white_check_mark: Testing', type: 'test' },
-            { hidden: true, type: 'wip' }
+            { section: ':package: Build', type: Type.BUILD },
+            { section: ':house_with_garden: Housekeeping', type: Type.CHORE },
+            { section: ':robot: Continuous Integration', type: Type.CI },
+            { section: ':pencil: Documentation', type: Type.DOCS },
+            { section: ':sparkles: Features', type: Type.FEAT },
+            { section: ':bug: Fixes', type: Type.FIX },
+            { section: ':fire: Performance Improvements', type: Type.PERF },
+            { section: ':mechanical_arm: Refactors', type: Type.REFACTOR },
+            { section: ':wastebasket: Reverts', type: Type.REVERT },
+            { hidden: true, type: Type.STYLE },
+            { section: ':white_check_mark: Testing', type: Type.TEST },
+            { hidden: true, type: Type.WIP }
           ]
         },
         releaseCount,
@@ -183,25 +188,23 @@ sade('changelog', true)
         transform(commit: Commit, apply: Options.Transform.Callback): void {
           return void apply(null, {
             ...commit,
-            committerDate: dateformat(
-              commit.committerDate!,
-              'yyyy-mm-dd',
-              true
-            ),
+            committerDate: dateformat(commit.committerDate, 'yyyy-mm-dd', true),
             mentions: commit.mentions.filter(m => m !== 'flexdevelopment'),
             // @ts-expect-error ts(2322)
             raw: commit,
             references: commit.references.filter(ref => ref.action !== null),
-            shortHash: commit.hash!.slice(0, 7),
             version: commit.gitTags ? vgx.exec(commit.gitTags)?.[1] : undefined
           })
-        }
+        },
+        warn: parserPreset.parserOpts.warn
       },
-      {},
       {},
       {
-        issuePrefixesCaseSensitive: true
+        debug: debug ? parserPreset.parserOpts.warn : undefined,
+        format:
+          '%B%n-hash-%n%H%n-shortHash-%n%h%n-gitTags-%n%d%n-committerDate-%n%ci%n'
       },
+      parserPreset.parserOpts,
       {
         /**
          * Sorts commit groups in descending order by group title.
@@ -299,8 +302,8 @@ sade('changelog', true)
 
             // try setting previous tag based on current tag
             if (gitSemverTags.includes(currentTag ?? '')) {
-              const { version } = key
-              previousTag = gitSemverTags[gitSemverTags.indexOf(version!) + 1]
+              const { version = '' } = key
+              previousTag = gitSemverTags[gitSemverTags.indexOf(version) + 1]
               if (!previousTag) previousTag = last_commit?.hash ?? undefined
             }
           } else {

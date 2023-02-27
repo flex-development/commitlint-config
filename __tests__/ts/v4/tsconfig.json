@@ -32,7 +32,8 @@
       "#fixtures/*": ["__fixtures__/*"],
       "#src": ["src/index"],
       "#src/*": ["src/*"],
-      "#tests/*": ["__tests__/*"]
+      "#tests/*": ["__tests__/*"],
+      "@flex-development/commitlint-config": ["src/index"]
     },
     "preserveConstEnums": true,
     "preserveSymlinks": false,
