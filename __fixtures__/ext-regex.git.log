@@ -1,0 +1,147 @@
+revert(deps-dev)!: flex-development/ext-regex@43ced89ca2404e855ab3aedddce445f4e9309ebf
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+-hash-
+4b2abcd5d75e9075d0cece6d9b971ca0e64beeb4
+-shortHash-
+4b2abcd
+-gitTags-
+
+-committerDate-
+2023-02-19 01:47:12 -0500
+
+revert(deps-dev): flexdevelopment@ff495037a1a5537bf386530ca540c4c073b47c79
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+-hash-
+ecafaf2f1431cecf1d326fe7cad3cb0bbaf30cfb
+-shortHash-
+ecafaf2
+-gitTags-
+
+-committerDate-
+2023-02-18 21:58:00 +0000
+
+revert: be8b47e536c91bb0940b7bcfb0aae9cd53f794bd
+
+Signed-off-by: Lexus Drumgold <unicornware@flexdevelopment.llc>
+
+-hash-
+cb2eca7ec86eaa45bc89e61d7a3fbfbb7a695c0f
+-shortHash-
+cb2eca7
+-gitTags-
+
+-committerDate-
+2023-02-18 17:00:24 -0500
+
+build(deps-dev): bump @flex-development/mkbuild from 1.0.0-alpha.11 to 1.0.0-alpha.13
+
+Signed-off-by: Lexus Drumgold <unicornware@flexdevelopment.llc>
+
+-hash-
+0c1a3f9ca18806d9ec06504fd5fff8fc55c4568e
+-shortHash-
+0c1a3f9
+-gitTags-
+
+-committerDate-
+2023-02-18 16:45:34 -0500
+
+ci(workflows): [`ci`] use `github.event.pull_request.head.sha` for codecov
+
+- codecov/codecov-bash#83
+- https://github.com/codecov/codecov-bash/issues/83#issuecomment-997761125
+- https://docs.github.com/actions/using-workflows/events-that-trigger-workflows#pull_request
+
+Signed-off-by: Lexus Drumgold <unicornware@flexdevelopment.llc>
+
+-hash-
+0d60f394051cda7368c5dced0fccd794e16e395c
+-shortHash-
+0d60f39
+-gitTags-
+
+-committerDate-
+2023-02-18 16:37:45 -0500
+
+release: 1.0.0 (#3)
+
+Signed-off-by: Lexus Drumgold <unicornware@flexdevelopment.llc>
+-hash-
+4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d
+-shortHash-
+4a04c8a
+-gitTags-
+ (tag: 1.0.0)
+-committerDate-
+2023-02-15 18:32:31 -0500
+
+docs: api
+
+Signed-off-by: Lexus Drumgold <unicornware@flexdevelopment.llc>
+
+-hash-
+126e1b2d7d8ab5d2629718efc567cf96f29a8819
+-shortHash-
+126e1b2
+-gitTags-
+
+-committerDate-
+2023-02-15 04:05:56 -0500
+
+chore(tests): [codecov] label critical files
+
+- https://docs.codecov.com/docs/manual-critical-file-labelling
+
+Signed-off-by: Lexus Drumgold <unicornware@flexdevelopment.llc>
+
+-hash-
+8e2432c3cfb9adfb5c725d120a1144096a11e69d
+-shortHash-
+8e2432c
+-gitTags-
+
+-committerDate-
+2023-02-15 00:21:49 -0500
+
+feat(utils): `extRegex`
+
+Signed-off-by: Lexus Drumgold <unicornware@flexdevelopment.llc>
+
+-hash-
+eb850cff64d86eadbcb238b3af7cae702b7ab405
+-shortHash-
+eb850cf
+-gitTags-
+
+-committerDate-
+2023-02-15 00:09:30 -0500
+
+ci(workflows): [`ci`] upload coverage report to codecov
+
+Signed-off-by: Lexus Drumgold <unicornware@flexdevelopment.llc>
+
+-hash-
+d8fe2fb256564dda77a1cb2fac78804a709e3e21
+-shortHash-
+d8fe2fb
+-gitTags-
+
+-committerDate-
+2023-02-14 15:24:18 -0500
+
+ci: [@dependabot] add config
+
+Signed-off-by: Lexus Drumgold <unicornware@flexdevelopment.llc>
+
+-hash-
+c7dfaab6fec3eba06d486b11bd6d9f1280c5b3f6
+-shortHash-
+c7dfaab
+-gitTags-
+
+-committerDate-
+2023-02-14 15:11:12 -0500

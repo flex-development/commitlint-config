@@ -1177,6 +1177,8 @@ __metadata:
     "@types/node-notifier": "npm:8.0.2"
     "@types/prettier": "npm:2.7.2"
     "@types/semver": "npm:7.3.13"
+    "@types/split2": "npm:3.2.1"
+    "@types/stream-to-array": "npm:2.3.0"
     "@typescript-eslint/eslint-plugin": "npm:5.53.0"
     "@typescript-eslint/parser": "npm:5.53.0"
     "@vates/toggle-scripts": "npm:1.0.0"
@@ -1184,6 +1186,7 @@ __metadata:
     "@vitest/ui": "npm:0.29.1"
     add-stream: "npm:1.0.0"
     chai: "npm:4.3.7"
+    consola: "npm:2.15.3"
     conventional-changelog: "npm:3.1.25"
     conventional-changelog-conventionalcommits: "npm:5.0.0"
     conventional-changelog-core: "npm:4.2.4"
@@ -1218,8 +1221,11 @@ __metadata:
     node-notifier: "npm:10.0.1"
     prettier: "npm:2.8.4"
     prettier-plugin-sh: "npm:0.12.8"
+    radash: "npm:10.7.0"
     sade: "npm:1.8.1"
     serve: "npm:14.2.0"
+    split2: "npm:4.1.0"
+    stream-to-array: "npm:2.3.0"
     tempfile: "npm:5.0.0"
     trash-cli: "npm:5.0.0"
     ts-dedent: "npm:2.2.0"
@@ -2189,6 +2195,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/split2@npm:3.2.1":
+  version: 3.2.1
+  resolution: "@types/split2@npm:3.2.1"
+  dependencies:
+    "@types/node": "npm:*"
+  checksum: 2769fe86ae2d086e901a4e7de148902c9a73060bd4415c8d49f695453300e8c9378a9baf9f60b59d171d4d07343c1e40b29bca31a0ba5955564a4272af210238
+  languageName: node
+  linkType: hard
+
+"@types/stream-to-array@npm:2.3.0":
+  version: 2.3.0
+  resolution: "@types/stream-to-array@npm:2.3.0"
+  dependencies:
+    "@types/node": "npm:*"
+  checksum: c18221ce9e6a0c7eb13cb6111ef2d683f1de42ef9e20f5ef249c1f41b43f0ee6291f6a431287d7162e291857f6d2c430572220f31619f686596ac2347accb66a
+  languageName: node
+  linkType: hard
+
 "@types/unist@npm:*, @types/unist@npm:^2.0.2":
   version: 2.0.6
   resolution: "@types/unist@npm:2.0.6"
@@ -2645,6 +2669,13 @@ __metadata:
   version: 6.2.1
   resolution: "ansi-styles@npm:6.2.1"
   checksum: 86fe3fc999c89775171631b32920d1fbf8adc4225895db376057b5a5e6fdcf837ae994ca08756f0a676c0dd8c74e58a7e87515d1fa16d6fcfffdf9069d579e90
+  languageName: node
+  linkType: hard
+
+"any-promise@npm:^1.1.0":
+  version: 1.3.0
+  resolution: "any-promise@npm:1.3.0"
+  checksum: 5768f5c5c10b5152048e2e4e44ba3509a9f3d0dfd8e73de34099adb6f05068966fa34feda164131a901fb37977d996f84a76a7ef120eff2f93725646937b4751
   languageName: node
   linkType: hard
 
@@ -8007,6 +8038,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"split2@npm:4.1.0":
+  version: 4.1.0
+  resolution: "split2@npm:4.1.0"
+  checksum: 9f5fcdc441f3de25900eb2dde17debef7fc41c4e0075693a4e807bd228a1f4a099484eadedbc9e36350aa207376934b5c28d6750225207ff0d2e3df3332e9cb9
+  languageName: node
+  linkType: hard
+
 "split2@npm:^3.0.0":
   version: 3.2.2
   resolution: "split2@npm:3.2.2"
@@ -8045,6 +8083,15 @@ __metadata:
   version: 3.3.2
   resolution: "std-env@npm:3.3.2"
   checksum: 383486453a3b34c9db54c3aab112e066f32c6afda55c89362fe56576a82564d60526578040f7fe3ff6173f18c426597cbf1be69be9de83f56b984533aa2c2599
+  languageName: node
+  linkType: hard
+
+"stream-to-array@npm:2.3.0":
+  version: 2.3.0
+  resolution: "stream-to-array@npm:2.3.0"
+  dependencies:
+    any-promise: "npm:^1.1.0"
+  checksum: 521390d1823c5869f29435137e09dbf36b701c03cdaa6d23a9cf7f08303ea6134b96db505d4ccebb85bbd166a414b0440ce6808d6629d8159bb37655288559f9
   languageName: node
   linkType: hard
 
