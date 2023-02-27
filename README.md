@@ -29,7 +29,9 @@ It also includes a set of utilities for customizing rules.
 
 ## When should I use this?
 
-**TODO**: use cases.
+This package can be used with [`@commitlint/cli`][3] and [`@commitlint/prompt-cli`][4].
+
+Commit parsing options can also be used with [`conventional-changelog`][5] and [`conventional-commits-parser`][6].
 
 ## Install
 
@@ -60,7 +62,7 @@ yarn add -D @flex-development/commitlint-config@flex-development/commitlint-conf
 
 ## Types
 
-This package is fully typed with [TypeScript][3].
+This package is fully typed with [TypeScript][7].
 
 ## Contribute
 
@@ -68,4 +70,8 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 [1]: https://commitlint.js.org/
 [2]: https://conventionalcommits.org/
-[3]: https://www.typescriptlang.org
+[3]: https://commitlint.js.org/#/reference-cli
+[4]: https://commitlint.js.org/#/guides-use-prompt
+[5]: https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog
+[6]: https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-commits-parser
+[7]: https://www.typescriptlang.org
