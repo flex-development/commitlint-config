@@ -56,6 +56,7 @@ const config: UserConfigExport = defineConfig((): UserConfig => {
           '**/__mocks__/**',
           '**/__tests__/**',
           '**/index.ts',
+          'src/interfaces/',
           'src/types/'
         ],
         extension: ['.ts'],
@@ -121,6 +122,7 @@ const config: UserConfigExport = defineConfig((): UserConfig => {
       snapshotFormat: {
         callToJSON: true,
         min: false,
+        printBasicPrototype: false,
         printFunctionName: true
       },
       testTimeout: 10 * 1000,
