@@ -3,6 +3,7 @@
  * @module commitlint-config/interfaces
  */
 
+export type { default as Commit } from './commit'
 export type { default as Config } from './config'
 export type { default as PromptConfig } from './config-prompt'
 export type { default as RulesConfig } from './config-rules'
