@@ -3,4 +3,4 @@
  * @module commitlint-config
  */
 
-export {}
+export * from './enums'
