@@ -107,7 +107,7 @@
     "@types/split2": "3.2.1",
     "@types/stream-to-array": "2.3.0",
     "@typescript-eslint/eslint-plugin": "5.53.0",
-    "@typescript-eslint/parser": "5.53.0",
+    "@typescript-eslint/parser": "5.54.0",
     "@vates/toggle-scripts": "1.0.0",
     "@vitest/coverage-c8": "0.29.1",
     "@vitest/expect": "0.29.1",
