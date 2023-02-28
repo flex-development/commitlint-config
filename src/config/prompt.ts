@@ -48,7 +48,7 @@ const prompt: PromptConfig = {
       description: 'If issues are closed, the commit requires a body'
     },
     [PromptKind.SCOPE]: {
-      description: 'What is the scope of this change?'
+      description: 'Scope of change being committed'
     },
     [PromptKind.SUBJECT]: {
       description: 'Short, imperative tense description of the change'
@@ -79,27 +79,32 @@ const prompt: PromptConfig = {
         [Type.FEAT]: {
           description: '',
           emoji: '✨',
-          title: 'Features'
+          title: 'Feature'
         },
         [Type.FIX]: {
           description: '',
           emoji: '🐛',
-          title: 'Fixes'
+          title: 'Fix'
         },
         [Type.PERF]: {
           description: '',
           emoji: '🔥',
-          title: 'Performance Improvements'
+          title: 'Performance Improvement'
         },
         [Type.REFACTOR]: {
           description: '',
           emoji: '🦾',
-          title: 'Refactors'
+          title: 'Refactor'
+        },
+        [Type.RELEASE]: {
+          description: '',
+          emoji: '🎯',
+          title: 'Release'
         },
         [Type.REVERT]: {
           description: '',
           emoji: '🗑️',
-          title: 'Reverts'
+          title: 'Revert'
         },
         [Type.STYLE]: {
           description: '',

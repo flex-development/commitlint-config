@@ -212,7 +212,7 @@ exports[`integration:config/rules > @commitlint/lint > type-case > should error 
   },
   {
     "level": 2,
-    "message": "type must be one of [build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test, wip]",
+    "message": "type must be one of [build, chore, ci, docs, feat, fix, perf, refactor, release, revert, style, test, wip]",
     "name": "type-enum",
     "valid": false,
   },
@@ -240,7 +240,7 @@ exports[`integration:config/rules > @commitlint/lint > type-enum > should error 
 [
   {
     "level": 2,
-    "message": "type must be one of [build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test, wip]",
+    "message": "type must be one of [build, chore, ci, docs, feat, fix, perf, refactor, release, revert, style, test, wip]",
     "name": "type-enum",
     "valid": false,
   },
@@ -251,7 +251,7 @@ exports[`integration:config/rules > @commitlint/lint > type-max-length > should 
 [
   {
     "level": 2,
-    "message": "type must be one of [build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test, wip]",
+    "message": "type must be one of [build, chore, ci, docs, feat, fix, perf, refactor, release, revert, style, test, wip]",
     "name": "type-enum",
     "valid": false,
   },
@@ -268,7 +268,7 @@ exports[`integration:config/rules > @commitlint/lint > type-min-length > should 
 [
   {
     "level": 2,
-    "message": "type must be one of [build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test, wip]",
+    "message": "type must be one of [build, chore, ci, docs, feat, fix, perf, refactor, release, revert, style, test, wip]",
     "name": "type-enum",
     "valid": false,
   },

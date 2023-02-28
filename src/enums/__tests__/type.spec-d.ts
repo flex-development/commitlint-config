@@ -54,6 +54,12 @@ describe('unit-d:enums/Type', () => {
       .toMatchTypeOf<'refactor'>()
   })
 
+  it('should match [RELEASE = "release"]', () => {
+    expectTypeOf<typeof TestSubject>()
+      .toHaveProperty('RELEASE')
+      .toMatchTypeOf<'release'>()
+  })
+
   it('should match [REVERT = "revert"]', () => {
     expectTypeOf<typeof TestSubject>()
       .toHaveProperty('REVERT')

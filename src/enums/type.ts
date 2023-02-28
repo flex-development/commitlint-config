@@ -19,6 +19,7 @@ enum Type {
   FIX = 'fix',
   PERF = 'perf',
   REFACTOR = 'refactor',
+  RELEASE = 'release',
   REVERT = 'revert',
   STYLE = 'style',
   TEST = 'test',
