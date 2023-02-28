@@ -73,17 +73,17 @@ describe('integration:config/rules', () => {
 
       beforeAll(() => {
         rule = 'body-leading-blank'
-        severity = Severity.Warning
+        severity = Severity.Error
       })
 
-      it('should warn if body does not have leading blank line', async () => {
+      it('should error if body comes after 1 new line', async () => {
         // Act
         const result = await linter(signoff('fix: some message\nbody'))
 
         // Expect
-        expect(result.errors).to.be.an('array').that.is.empty
-        expect(result.warnings).to.have.ruleOutcome(rule, severity)
-        expect(result.warnings).toMatchSnapshot()
+        expect(result.errors).to.have.ruleOutcome(rule, severity)
+        expect(result.warnings).to.be.an('array').that.is.empty
+        expect(result.errors).toMatchSnapshot()
       })
     })
 
@@ -139,10 +139,10 @@ describe('integration:config/rules', () => {
 
       beforeAll(() => {
         rule = 'footer-leading-blank'
-        severity = Severity.Warning
+        severity = Severity.Error
       })
 
-      it('should warn if footer does not have leading blank line', async () => {
+      it('should error if footer comes after 1 new line', async () => {
         // Arrange
         const commit: string =
           'test: some message\n\nbody\nBREAKING CHANGE: It will be significant'
@@ -151,9 +151,9 @@ describe('integration:config/rules', () => {
         const result = await linter(signoff(commit, 0))
 
         // Expect
-        expect(result.errors).to.be.an('array').that.is.empty
-        expect(result.warnings).to.have.ruleOutcome(rule, severity)
-        expect(result.warnings).toMatchSnapshot()
+        expect(result.errors).to.have.ruleOutcome(rule, severity)
+        expect(result.warnings).to.be.an('array').that.is.empty
+        expect(result.errors).toMatchSnapshot()
       })
     })
 

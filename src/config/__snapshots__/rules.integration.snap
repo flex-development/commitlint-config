@@ -11,10 +11,10 @@ exports[`integration:config/rules > @commitlint/lint > body-full-stop > should e
 ]
 `;
 
-exports[`integration:config/rules > @commitlint/lint > body-leading-blank > should warn if body does not have leading blank line 1`] = `
+exports[`integration:config/rules > @commitlint/lint > body-leading-blank > should error if body comes after 1 new line 1`] = `
 [
   {
-    "level": 1,
+    "level": 2,
     "message": "body must have leading blank line",
     "name": "body-leading-blank",
     "valid": false,
@@ -22,10 +22,10 @@ exports[`integration:config/rules > @commitlint/lint > body-leading-blank > shou
 ]
 `;
 
-exports[`integration:config/rules > @commitlint/lint > footer-leading-blank > should warn if footer does not have leading blank line 1`] = `
+exports[`integration:config/rules > @commitlint/lint > footer-leading-blank > should error if footer comes after 1 new line 1`] = `
 [
   {
-    "level": 1,
+    "level": 2,
     "message": "footer must have leading blank line",
     "name": "footer-leading-blank",
     "valid": false,
