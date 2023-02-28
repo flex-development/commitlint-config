@@ -17,7 +17,12 @@ import type Revert from './revert'
  * Object representing a parsed commit.
  */
 interface Commit {
-  [field: string]: Note[] | Nullable<OneOrMany<string>> | Reference[] | Revert
+  [field: string]:
+    | Commit
+    | Note[]
+    | Nullable<OneOrMany<string>>
+    | Reference[]
+    | Revert
 
   /**
    * Commit body text.

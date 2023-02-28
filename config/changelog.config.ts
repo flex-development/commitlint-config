@@ -22,7 +22,6 @@ import type {
   CommitGroup,
   GeneratedContext
 } from 'conventional-changelog-writer'
-import type { ICommit } from 'conventional-commits-parser'
 import dateformat from 'dateformat'
 import type mri from 'mri'
 import {
@@ -37,6 +36,16 @@ import sade from 'sade'
 import semver from 'semver'
 import tempfile from 'tempfile'
 import pkg from '../package.json' assert { type: 'json' }
+
+/**
+ * Parsed commit with additional fields.
+ *
+ * @extends {Commit}
+ */
+interface CommitEnhanced extends Commit {
+  raw: Commit
+  version?: string
+}
 
 /**
  * CLI flags.
@@ -235,11 +244,11 @@ sade('changelog', true)
          *
          * @see https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-writer#commitssort
          *
-         * @param {ICommit} a - Commit object
-         * @param {ICommit} b - Commit object to compare to `b`
+         * @param {Commit} a - Commit object
+         * @param {Commit} b - Commit object to compare to `b`
          * @return {number} Compare result
          */
-        commitsSort(a: ICommit, b: ICommit): number {
+        commitsSort(a: Commit, b: Commit): number {
           /**
            * Compare result for {@linkcode b.committerDate} and
            * {@linkcode a.committerDate}.
@@ -269,15 +278,15 @@ sade('changelog', true)
          *
          * @param {GeneratedContext} context - Generated changelog context
          * @param {Options} options - `conventional-changelog-core` options
-         * @param {ICommit[]} commits - Commits for release
-         * @param {ICommit | undefined} key - Release commit
+         * @param {CommitEnhanced[]} commits - Commits for release
+         * @param {CommitEnhanced?} key - Release commit
          * @return {GeneratedContext} Final changelog context
          */
         finalizeContext(
           context: GeneratedContext,
           options: Options,
-          commits: ICommit[],
-          key: ICommit | undefined
+          commits: CommitEnhanced[],
+          key?: CommitEnhanced
         ): GeneratedContext {
           const { gitSemverTags = [], isPatch, linkCompare, version } = context
           let { currentTag, previousTag } = context
@@ -285,16 +294,16 @@ sade('changelog', true)
           /**
            * First commit in release.
            *
-           * @const {ICommit | undefined} first_commit
+           * @const {CommitEnhanced?} first_commit
            */
-          const first_commit: ICommit | undefined = commits.at(0)
+          const first_commit: CommitEnhanced | undefined = commits.at(0)
 
           /**
            * Last commit in release.
            *
-           * @const {ICommit | undefined} last_commit
+           * @const {CommitEnhanced?} last_commit
            */
-          const last_commit: ICommit | undefined = commits.at(-1)
+          const last_commit: CommitEnhanced | undefined = commits.at(-1)
 
           // set current and previous tags
           if (key && (!currentTag || !previousTag)) {
