@@ -18,6 +18,31 @@ Shareable [`commitlint`][1] config enforcing [conventional commits][2]
 - [Install](#install)
 - [Use](#use)
   - [Customizing scopes and types](#customizing-scopes-and-types)
+- [Rules](#rules)
+  - [Problems](#problems)
+    - [`body-full-stop`](#body-full-stop)
+    - [`body-leading-blank`](#body-leading-blank)
+    - [`body-max-length`](#body-max-length)
+    - [`body-max-line-length`](#body-max-line-length)
+    - [`footer-leading-blank`](#footer-leading-blank)
+    - [`footer-max-length`](#footer-max-length)
+    - [`footer-max-line-length`](#footer-max-line-length)
+    - [`header-full-stop`](#header-full-stop)
+    - [`header-max-length`](#header-max-length)
+    - [`scope-case`](#scope-case)
+    - [`scope-enum`](#scope-enum)
+    - [`scope-max-length`](#scope-max-length)
+    - [`scope-min-length`](#scope-min-length)
+    - [`signed-off-by`](#signed-off-by)
+    - [`subject-empty`](#subject-empty)
+    - [`subject-full-stop`](#subject-full-stop)
+    - [`subject-min-length`](#subject-min-length)
+    - [`trailer-exists`](#trailer-exists)
+    - [`type-case`](#type-case)
+    - [`type-empty`](#type-empty)
+    - [`type-enum`](#type-enum)
+    - [`type-max-length`](#type-max-length)
+    - [`type-min-length`](#type-min-length)
 - [API](#api)
   - [`config`](#config)
   - `defaultIgnores`
@@ -117,6 +142,225 @@ You may need to set [`TS_NODE_PROJECT`][10] if running `commitlint` from the com
 
 See [`docs/examples/commitlint.config.cjs`](docs/examples/commitlint.config.cjs) for an example config written in pure CommonJS.
 
+## Rules
+
+Rules **not** documented below are disabled by default. Consult the [rules reference][11] for a list of all rules.
+
+### Problems
+
+The following rules are considered problems for `@flex-development/commitlint-config` and will yield a non-zero exit
+code when not met.
+
+#### `body-full-stop`
+
+- **condition**: `body` ends with `value`
+- **rule**: `never`
+- **value**:
+
+  ```ts
+  '.'
+  ```
+
+#### `body-leading-blank`
+
+- **condition**: `body` begins with blank line
+- **rule**: `always`
+
+#### `body-max-length`
+
+- **condition**: `body` has `value` or less characters
+- **rule**: `always`
+- **value**:
+
+  ```ts
+  Number.MAX_SAFE_INTEGER
+  ```
+
+#### `body-max-line-length`
+
+- **condition**: `body` lines has `value` or less characters
+- **rule**: `always`
+- **value**:
+
+  ```ts
+  2050
+  ```
+
+#### `footer-leading-blank`
+
+- **condition**: `footer` begins with blank line
+- **rule**: `always`
+
+#### `footer-max-length`
+
+- **condition**: `footer` has `value` or less characters
+- **rule**: `always`
+- **value**:
+
+  ```ts
+  Number.MAX_SAFE_INTEGER
+  ```
+
+#### `footer-max-line-length`
+
+- **condition**: `footer` lines has `value` or less characters
+- **rule**: `always`
+- **value**:
+
+  ```ts
+  2050
+  ```
+
+#### `header-full-stop`
+
+- **condition**: `header` ends with `value`
+- **rule**: `never`
+- **value**:
+
+  ```ts
+  '.'
+  ```
+
+#### `header-max-length`
+
+- **condition**: `header` has `value` or less characters
+- **rule**: `always`
+- **value**:
+
+  ```ts
+  100
+  ```
+
+#### `scope-case`
+
+- **condition**: `scope` is in case that is in `value`
+- **rule**: `always`
+- **value**:
+
+  ```ts
+  ['kebab-case', 'lower-case']
+  ```
+
+#### `scope-enum`
+
+- **condition**: `scope` is found in `value`
+- **rule**: `always`
+- **value**:
+
+  ```ts
+  scopes()
+  ```
+
+#### `scope-max-length`
+
+- **condition**: `scope` has `value` or less characters
+- **rule**: `always`
+- **value**:
+
+  ```ts
+  max(scopes())
+  ```
+
+#### `scope-min-length`
+
+- **condition**: `scope` has `value` or more characters
+- **rule**: `always`
+- **value**:
+
+  ```ts
+  min(scopes())
+  ```
+
+#### `signed-off-by`
+
+- **condition**: `message` has `value`
+- **rule**: `always`
+- **value**:
+
+  ```ts
+  'Signed-off-by:'
+  ```
+
+#### `subject-empty`
+
+- **condition**: `subject` is empty
+- **rule**: `never`
+
+#### `subject-full-stop`
+
+- **condition**: `subject` ends with `value`
+- **rule**: `never`
+- **value**:
+
+  ```ts
+  '.'
+  ```
+
+#### `subject-min-length`
+
+- **condition**: `subject` has `value` or more characters
+- **rule**: `always`
+- **value**:
+
+  ```ts
+  2
+  ```
+
+#### `trailer-exists`
+
+- **condition**: `message` has trailer `value`
+- **rule**: `always`
+- **value**:
+
+  ```ts
+  'Signed-off-by:'
+  ```
+
+#### `type-case`
+
+- **description**: `type` is in case `value`
+- **rule**: `always`
+- **value**:
+
+  ```ts
+  'lower-case'
+  ```
+
+#### `type-empty`
+
+- **condition**: `type` is empty
+- **rule**: `never`
+
+#### `type-enum`
+
+- **condition**: `type` is found in `value`
+- **rule**: `always`
+- **value**:
+
+  ```ts
+  types()
+  ```
+
+#### `type-max-length`
+
+- **condition**: `type` has `value` or less characters
+- **rule**: `always`
+- **value**:
+
+  ```ts
+  max(types)
+  ```
+
+#### `type-min-length`
+
+- **condition**: `type` has `value` or more characters
+- **rule**: `always`
+- **value**:
+
+  ```ts
+  min(types())
+  ```
+
 ## API
 
 This package exports the following identifiers:
@@ -152,7 +396,7 @@ Properties:
 - `prompt`
 - `rules`
 
-See the [configuration reference][11] for more details.
+See the [configuration reference][12] for more details.
 
 ### Utilities
 
@@ -222,7 +466,7 @@ Returns an array containing valid commit types.
 
 ## Types
 
-This package is fully typed with [TypeScript][12].
+This package is fully typed with [TypeScript][13].
 
 ### Enums
 
@@ -264,5 +508,6 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 [8]: https://commitlint.js.org/#/reference-rules?id=scope-enum
 [9]: https://commitlint.js.org/#/reference-rules?id=type-enum
 [10]: https://typestrong.org/ts-node/docs/options#project
-[11]: https://commitlint.js.org/#/reference-configuration
-[12]: https://www.typescriptlang.org
+[11]: https://commitlint.js.org/#/reference-rules
+[12]: https://commitlint.js.org/#/reference-configuration
+[13]: https://www.typescriptlang.org
