@@ -6,6 +6,7 @@
     "commitlint",
     "commitlint-config",
     "conventional-changelog",
+    "conventional-commits-parser",
     "typescript"
   ],
   "license": "BSD-3-Clause",
