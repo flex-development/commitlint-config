@@ -19,6 +19,19 @@ Shareable [`commitlint`][1] config enforcing [conventional commits][2]
 - [Use](#use)
   - [Customizing scopes and types](#customizing-scopes-and-types)
 - [API](#api)
+  - [`config`](#config)
+  - `defaultIgnores`
+  - `formatter`
+  - `helpUrl`
+  - `ignores`
+  - [`max(array)`](#maxarray)
+  - [`min(array)`](#minarray)
+  - `parserPreset`
+  - `plugins`
+  - `prompt`
+  - `rules`
+  - [`scopes([extras])`](#scopesextras)
+  - [`types([extras])`](#typesextras)
 - [Types](#types)
   - [Enums](#enums)
   - [Interfaces](#interfaces)
@@ -106,11 +119,110 @@ See [`docs/examples/commitlint.config.cjs`](docs/examples/commitlint.config.cjs)
 
 ## API
 
-**TODO**: api documentation.
+This package exports the following identifiers:
+
+- [`config`](#config)
+- `defaultIgnores`
+- `formatter`
+- `helpUrl`
+- `ignores`
+- [`max`](#maxarray)
+- [`min`](#minarray)
+- `parserPreset`
+- `plugins`
+- `prompt`
+- `rules`
+- [`scopes`](#scopesextras)
+- [`types`](#typesextras)
+
+The default export is `config`.
+
+### `config`
+
+`commitlint` configuration object.
+
+Properties:
+
+- `defaultIgnores`
+- `formatter`
+- `helpUrl`
+- `ignores`
+- `parserPreset`
+- `plugins`
+- `prompt`
+- `rules`
+
+See the [configuration reference][11] for more details.
+
+### Utilities
+
+#### `max(array)`
+
+Returns the length of the longest string in the given `array`.
+
+##### Parameters
+
+- `{string[]}` **`array`** &mdash; Array to evaluate
+
+##### Returns
+
+`{number}` Length of longest string in `array`.
+
+##### Source
+
+> [`src/utils/max.ts`](src/utils/max.ts)
+
+#### `min(array)`
+
+Returns the length of the shortest string in the given `array`.
+
+##### Parameters
+
+- `{string[]}` **`array`** &mdash; Array to evaluate
+
+##### Returns
+
+`{number}` Length of shortest string in `array`.
+
+##### Source
+
+> [`src/utils/min.ts`](src/utils/min.ts)
+
+#### `scopes([extras])`
+
+Returns an array containing valid commit scopes.
+
+##### Parameters
+
+- `{(Set<string> | string[])?}` **`[extras=[]]`** &mdash; Additional commit scopes
+
+##### Returns
+
+`{LiteralUnion<Scope, string>[]}` Commit scopes array.
+
+##### Source
+
+> [`src/utils/scopes.ts`](src/utils/scopes.ts)
+
+#### `types([extras])`
+
+Returns an array containing valid commit types.
+
+##### Parameters
+
+- `{(Set<string> | string[])?}` **`[extras=[]]`** &mdash; Additional commit types
+
+##### Returns
+
+`{LiteralUnion<Type, string>[]}` Commit types array.
+
+##### Source
+
+> [`src/utils/types.ts`](src/utils/types.ts)
 
 ## Types
 
-This package is fully typed with [TypeScript][11].
+This package is fully typed with [TypeScript][12].
 
 ### Enums
 
@@ -152,4 +264,5 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 [8]: https://commitlint.js.org/#/reference-rules?id=scope-enum
 [9]: https://commitlint.js.org/#/reference-rules?id=type-enum
 [10]: https://typestrong.org/ts-node/docs/options#project
-[11]: https://www.typescriptlang.org
+[11]: https://commitlint.js.org/#/reference-configuration
+[12]: https://www.typescriptlang.org

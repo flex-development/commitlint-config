@@ -7,7 +7,7 @@ import { Type } from '#src/enums'
 import type { LiteralUnion } from '@flex-development/tutils'
 
 /**
- * Returns an array of valid commit types.
+ * Returns an array containing valid commit types.
  *
  * @param {(Set<string> | string[])?} [extras=[]] - Additional commit types
  * @return {LiteralUnion<Type, string>[]} Commit types array

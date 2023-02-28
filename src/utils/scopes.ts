@@ -7,7 +7,7 @@ import { Scope } from '#src/enums'
 import type { LiteralUnion } from '@flex-development/tutils'
 
 /**
- * Returns an array of valid commit scopes.
+ * Returns an array containing valid commit scopes.
  *
  * @param {(Set<string> | string[])?} [extras=[]] - Additional commit scopes
  * @return {LiteralUnion<Scope, string>[]} Commit scopes array
