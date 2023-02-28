@@ -85,6 +85,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.4.4",
     "@commitlint/lint": "17.4.4",
+    "@flex-development/ext-regex": "1.0.0",
     "@flex-development/mkbuild": "1.0.0-alpha.14",
     "@flex-development/mlly": "1.0.0-alpha.13",
     "@flex-development/pathe": "1.0.3",

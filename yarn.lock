@@ -1148,6 +1148,7 @@ __metadata:
     "@commitlint/cli": "npm:17.4.4"
     "@commitlint/lint": "npm:17.4.4"
     "@commitlint/types": "npm:17.4.4"
+    "@flex-development/ext-regex": "npm:1.0.0"
     "@flex-development/mkbuild": "npm:1.0.0-alpha.14"
     "@flex-development/mlly": "npm:1.0.0-alpha.13"
     "@flex-development/pathe": "npm:1.0.3"
