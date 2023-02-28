@@ -1,7 +1,7 @@
 {
   "name": "@flex-development/commitlint-config",
   "description": "Shareable commitlint config enforcing conventional commits",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "keywords": [
     "commitlint",
     "commitlint-config",
