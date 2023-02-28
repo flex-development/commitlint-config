@@ -164,240 +164,244 @@ exports[`unit:config/parserPreset > .parserOpts > .headerPattern > should match 
 }
 `;
 
-exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match header with [type,breaking,repo,hash] 1`] = `
+exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match commit with [type,breaking,hash] 1`] = `
+{
+  "0": "revert!: \\"release: 2.0.0-alpha.1\\"
+
+- 4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
+  "1": "revert",
+  "2": undefined,
+  "3": "!",
+  "4": undefined,
+  "5": undefined,
+  "6": undefined,
+  "7": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
+  "groups": {
+    "breaking": "!",
+    "hash": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
+    "owner": undefined,
+    "repository": undefined,
+    "scope": undefined,
+    "type": "revert",
+    "user": undefined,
+  },
+}
+`;
+
+exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match commit with [type,breaking,repo,hash] 1`] = `
 {
   "0": "revert!: flex-development/ext-regex@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
   "1": "revert",
   "2": undefined,
   "3": "!",
-  "4": "flex-development/ext-regex@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
-  "5": "flex-development",
-  "6": "ext-regex",
-  "7": undefined,
-  "8": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
+  "4": "flex-development",
+  "5": "ext-regex",
+  "6": undefined,
+  "7": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
   "groups": {
     "breaking": "!",
     "hash": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
     "owner": "flex-development",
     "repository": "ext-regex",
     "scope": undefined,
-    "subject": "flex-development/ext-regex@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
     "type": "revert",
     "user": undefined,
   },
 }
 `;
 
-exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match header with [type,breaking,user,hash] 1`] = `
+exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match commit with [type,breaking,user,hash] 1`] = `
 {
   "0": "revert!: flexdevelopment@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
   "1": "revert",
   "2": undefined,
   "3": "!",
-  "4": "flexdevelopment@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
+  "4": undefined,
   "5": undefined,
-  "6": undefined,
-  "7": "flexdevelopment",
-  "8": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
+  "6": "flexdevelopment",
+  "7": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
   "groups": {
     "breaking": "!",
     "hash": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
     "owner": undefined,
     "repository": undefined,
     "scope": undefined,
-    "subject": "flexdevelopment@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
     "type": "revert",
     "user": "flexdevelopment",
   },
 }
 `;
 
-exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match header with [type,hash] 1`] = `
+exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match commit with [type,hash] 1`] = `
 {
   "0": "revert: 4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
   "1": "revert",
   "2": undefined,
   "3": undefined,
-  "4": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
+  "4": undefined,
   "5": undefined,
   "6": undefined,
-  "7": undefined,
-  "8": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
+  "7": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
   "groups": {
     "breaking": undefined,
     "hash": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
     "owner": undefined,
     "repository": undefined,
     "scope": undefined,
-    "subject": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
     "type": "revert",
     "user": undefined,
   },
 }
 `;
 
-exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match header with [type,repo,hash] 1`] = `
+exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match commit with [type,repo,hash] 1`] = `
 {
   "0": "revert: flex-development/ext-regex@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
   "1": "revert",
   "2": undefined,
   "3": undefined,
-  "4": "flex-development/ext-regex@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
-  "5": "flex-development",
-  "6": "ext-regex",
-  "7": undefined,
-  "8": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
+  "4": "flex-development",
+  "5": "ext-regex",
+  "6": undefined,
+  "7": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
   "groups": {
     "breaking": undefined,
     "hash": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
     "owner": "flex-development",
     "repository": "ext-regex",
     "scope": undefined,
-    "subject": "flex-development/ext-regex@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
     "type": "revert",
     "user": undefined,
   },
 }
 `;
 
-exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match header with [type,scope,breaking,repo,hash] 1`] = `
+exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match commit with [type,scope,breaking,repo,hash] 1`] = `
 {
   "0": "revert(release)!: flex-development/ext-regex@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
   "1": "revert",
   "2": "release",
   "3": "!",
-  "4": "flex-development/ext-regex@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
-  "5": "flex-development",
-  "6": "ext-regex",
-  "7": undefined,
-  "8": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
+  "4": "flex-development",
+  "5": "ext-regex",
+  "6": undefined,
+  "7": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
   "groups": {
     "breaking": "!",
     "hash": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
     "owner": "flex-development",
     "repository": "ext-regex",
     "scope": "release",
-    "subject": "flex-development/ext-regex@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
     "type": "revert",
     "user": undefined,
   },
 }
 `;
 
-exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match header with [type,scope,breaking,user,hash] 1`] = `
+exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match commit with [type,scope,breaking,user,hash] 1`] = `
 {
   "0": "revert(release)!: flexdevelopment@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
   "1": "revert",
   "2": "release",
   "3": "!",
-  "4": "flexdevelopment@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
+  "4": undefined,
   "5": undefined,
-  "6": undefined,
-  "7": "flexdevelopment",
-  "8": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
+  "6": "flexdevelopment",
+  "7": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
   "groups": {
     "breaking": "!",
     "hash": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
     "owner": undefined,
     "repository": undefined,
     "scope": "release",
-    "subject": "flexdevelopment@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
     "type": "revert",
     "user": "flexdevelopment",
   },
 }
 `;
 
-exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match header with [type,scope,hash] 1`] = `
+exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match commit with [type,scope,hash] 1`] = `
 {
   "0": "revert(release): 4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
   "1": "revert",
   "2": "release",
   "3": undefined,
-  "4": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
+  "4": undefined,
   "5": undefined,
   "6": undefined,
-  "7": undefined,
-  "8": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
+  "7": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
   "groups": {
     "breaking": undefined,
     "hash": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
     "owner": undefined,
     "repository": undefined,
     "scope": "release",
-    "subject": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
     "type": "revert",
     "user": undefined,
   },
 }
 `;
 
-exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match header with [type,scope,repo,hash] 1`] = `
+exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match commit with [type,scope,repo,hash] 1`] = `
 {
   "0": "revert(release): flex-development/ext-regex@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
   "1": "revert",
   "2": "release",
   "3": undefined,
-  "4": "flex-development/ext-regex@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
-  "5": "flex-development",
-  "6": "ext-regex",
-  "7": undefined,
-  "8": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
+  "4": "flex-development",
+  "5": "ext-regex",
+  "6": undefined,
+  "7": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
   "groups": {
     "breaking": undefined,
     "hash": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
     "owner": "flex-development",
     "repository": "ext-regex",
     "scope": "release",
-    "subject": "flex-development/ext-regex@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
     "type": "revert",
     "user": undefined,
   },
 }
 `;
 
-exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match header with [type,scope,user,hash] 1`] = `
+exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match commit with [type,scope,user,hash] 1`] = `
 {
   "0": "revert(release): flexdevelopment@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
   "1": "revert",
   "2": "release",
   "3": undefined,
-  "4": "flexdevelopment@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
+  "4": undefined,
   "5": undefined,
-  "6": undefined,
-  "7": "flexdevelopment",
-  "8": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
+  "6": "flexdevelopment",
+  "7": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
   "groups": {
     "breaking": undefined,
     "hash": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
     "owner": undefined,
     "repository": undefined,
     "scope": "release",
-    "subject": "flexdevelopment@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
     "type": "revert",
     "user": "flexdevelopment",
   },
 }
 `;
 
-exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match header with [type,user,hash] 1`] = `
+exports[`unit:config/parserPreset > .parserOpts > .revertPattern > should match commit with [type,user,hash] 1`] = `
 {
   "0": "revert: flexdevelopment@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
   "1": "revert",
   "2": undefined,
   "3": undefined,
-  "4": "flexdevelopment@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
+  "4": undefined,
   "5": undefined,
-  "6": undefined,
-  "7": "flexdevelopment",
-  "8": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
+  "6": "flexdevelopment",
+  "7": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
   "groups": {
     "breaking": undefined,
     "hash": "4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
     "owner": undefined,
     "repository": undefined,
     "scope": undefined,
-    "subject": "flexdevelopment@4a04c8afb2b4ba1dfea3ff11e7a14d2850896e2d",
     "type": "revert",
     "user": "flexdevelopment",
   },

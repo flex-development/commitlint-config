@@ -36,10 +36,6 @@ describe('unit-d:interfaces/Revert', () => {
       .toEqualTypeOf<Nullable<LiteralUnion<Scope, string>>>()
   })
 
-  it('should match [subject: string]', () => {
-    expectTypeOf<TestSubject>().toHaveProperty('subject').toBeString()
-  })
-
   it('should match [type: Type.REVERT]', () => {
     expectTypeOf<TestSubject>()
       .toHaveProperty('type')

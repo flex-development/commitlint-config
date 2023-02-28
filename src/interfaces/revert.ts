@@ -40,11 +40,6 @@ interface Revert {
   scope: Nullable<LiteralUnion<Scope, string>>
 
   /**
-   * Commit subject.
-   */
-  subject: string
-
-  /**
    * Commit type.
    */
   type: Type.REVERT

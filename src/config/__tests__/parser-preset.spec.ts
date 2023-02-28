@@ -269,19 +269,31 @@ describe('unit:config/parserPreset', () => {
         subject = testSubject.parserOpts.revertPattern
       })
 
-      it('should match header with [type,breaking,repo,hash]', () => {
+      it('should match commit with [type,breaking,hash]', () => {
         // Arrange
-        const header: string = 'revert!: flex-development/ext-regex@' + hash
+        const commit: string = 'revert!: "release: 2.0.0-alpha.1"\n\n- ' + hash
 
         // Act
-        const result = subject.exec(header)
+        const result = subject.exec(commit)
 
         // Expect
         expect(result).to.not.be.null
         expect(result).toMatchSnapshot()
       })
 
-      it('should match header with [type,breaking,user,hash]', () => {
+      it('should match commit with [type,breaking,repo,hash]', () => {
+        // Arrange
+        const commit: string = 'revert!: flex-development/ext-regex@' + hash
+
+        // Act
+        const result = subject.exec(commit)
+
+        // Expect
+        expect(result).to.not.be.null
+        expect(result).toMatchSnapshot()
+      })
+
+      it('should match commit with [type,breaking,user,hash]', () => {
         // Act
         const result = subject.exec(`revert!: flexdevelopment@${hash}`)
 
@@ -290,7 +302,7 @@ describe('unit:config/parserPreset', () => {
         expect(result).toMatchSnapshot()
       })
 
-      it('should match header with [type,hash]', () => {
+      it('should match commit with [type,hash]', () => {
         // Act
         const result = subject.exec(`revert: ${hash}`)
 
@@ -299,32 +311,32 @@ describe('unit:config/parserPreset', () => {
         expect(result).toMatchSnapshot()
       })
 
-      it('should match header with [type,repo,hash]', () => {
+      it('should match commit with [type,repo,hash]', () => {
         // Arrange
-        const header: string = 'revert: flex-development/ext-regex@' + hash
+        const commit: string = 'revert: flex-development/ext-regex@' + hash
 
         // Act
-        const result = subject.exec(header)
+        const result = subject.exec(commit)
 
         // Expect
         expect(result).to.not.be.null
         expect(result).toMatchSnapshot()
       })
 
-      it('should match header with [type,scope,breaking,repo,hash]', () => {
+      it('should match commit with [type,scope,breaking,repo,hash]', () => {
         // Arrange
-        const header: string =
+        const commit: string =
           'revert(release)!: flex-development/ext-regex@' + hash
 
         // Act
-        const result = subject.exec(header)
+        const result = subject.exec(commit)
 
         // Expect
         expect(result).to.not.be.null
         expect(result).toMatchSnapshot()
       })
 
-      it('should match header with [type,scope,breaking,user,hash]', () => {
+      it('should match commit with [type,scope,breaking,user,hash]', () => {
         // Act
         const result = subject.exec(`revert(release)!: flexdevelopment@${hash}`)
 
@@ -333,7 +345,7 @@ describe('unit:config/parserPreset', () => {
         expect(result).toMatchSnapshot()
       })
 
-      it('should match header with [type,scope,hash]', () => {
+      it('should match commit with [type,scope,hash]', () => {
         // Act
         const result = subject.exec(`revert(release): ${hash}`)
 
@@ -342,20 +354,20 @@ describe('unit:config/parserPreset', () => {
         expect(result).toMatchSnapshot()
       })
 
-      it('should match header with [type,scope,repo,hash]', () => {
+      it('should match commit with [type,scope,repo,hash]', () => {
         // Arrange
-        const header: string =
+        const commit: string =
           'revert(release): flex-development/ext-regex@' + hash
 
         // Act
-        const result = subject.exec(header)
+        const result = subject.exec(commit)
 
         // Expect
         expect(result).to.not.be.null
         expect(result).toMatchSnapshot()
       })
 
-      it('should match header with [type,scope,user,hash]', () => {
+      it('should match commit with [type,scope,user,hash]', () => {
         // Act
         const result = subject.exec(`revert(release): flexdevelopment@${hash}`)
 
@@ -364,7 +376,7 @@ describe('unit:config/parserPreset', () => {
         expect(result).toMatchSnapshot()
       })
 
-      it('should match header with [type,user,hash]', () => {
+      it('should match commit with [type,user,hash]', () => {
         // Act
         const result = subject.exec(`revert: flexdevelopment@${hash}`)
 
@@ -373,7 +385,7 @@ describe('unit:config/parserPreset', () => {
         expect(result).toMatchSnapshot()
       })
 
-      it('should not match header without type "revert"', () => {
+      it('should not match commit without type "revert"', () => {
         expect(subject.exec('docs: what is this?')).to.be.null
       })
     })

@@ -35,14 +35,13 @@ const parserPreset: ParserPreset = {
       'type',
       'scope',
       'breaking',
-      'subject',
       'owner',
       'repository',
       'user',
       'hash'
     ],
     revertPattern:
-      /^(?<type>revert)(?:\((?<scope>[a-z-]+)\))?(?<breaking>!)?: +(?<subject>(?:(?:(?:(?<owner>[\d*a-z~-][\w*.~-]*)\/(?<repository>[\da-z~-][\w.~-]*))|(?<user>[\da-z~-][\w.~-]*))@)?(?<hash>[\da-z]+))/,
+      /^(?<type>revert)(?:\((?<scope>[a-z-]+)\))?(?<breaking>!)?: (?:|(?:.+\n\n(?:- )?))(?:(?:(?:(?<owner>[\d*a-z~-][\w*.~-]*)\/(?<repository>[\da-z~-][\w.~-]*))|(?<user>[\da-z~-][\w.~-]*))@)?(?<hash>[\da-z]+)/,
     warn: consola.warn.bind(consola)
   }
 }

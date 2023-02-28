@@ -3,8 +3,38 @@
 exports[`integration:config/parserPreset > conventional-commits-parser > should parse commits 1`] = `
 [
   {
-    "body": "Signed-off-by: dependabot[bot] <support@github.com>
-Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+    "body": "- bd26a32f1a0a88c576da3fc22febbe3edaf8e618
+
+Signed-off-by: Lexus Drumgold <unicornware@flexdevelopment.llc>",
+    "breaking": "!",
+    "committerDate": "2023-02-27 09:22:05 -0500",
+    "footer": null,
+    "gitTags": " (tag: 2.0.0-alpha.1)",
+    "hash": "dfbbacdbf59b0a6b052ce04dccf1f69eced9d7d2",
+    "header": "revert!: \\"release: 2.0.0-alpha.1\\"",
+    "mentions": [
+      "flexdevelopment",
+    ],
+    "merge": null,
+    "notes": [],
+    "pr": null,
+    "references": [],
+    "revert": {
+      "breaking": "!",
+      "hash": "bd26a32f1a0a88c576da3fc22febbe3edaf8e618",
+      "owner": null,
+      "repository": null,
+      "scope": null,
+      "type": "revert",
+      "user": null,
+    },
+    "scope": null,
+    "shortHash": "dfbbacd",
+    "subject": "\\"release: 2.0.0-alpha.1\\"",
+    "type": "revert",
+  },
+  {
+    "body": "Signed-off-by: Lexus Drumgold <unicornware@flexdevelopment.llc>",
     "breaking": "!",
     "committerDate": "2023-02-19 01:47:12 -0500",
     "footer": null,
@@ -13,8 +43,7 @@ Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.c
     "header": "revert(deps-dev)!: flex-development/ext-regex@43ced89ca2404e855ab3aedddce445f4e9309ebf",
     "mentions": [
       "43ced89ca2404e855ab3aedddce445f4e9309ebf",
-      "github",
-      "users",
+      "flexdevelopment",
     ],
     "merge": null,
     "notes": [],
@@ -26,7 +55,6 @@ Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.c
       "owner": "flex-development",
       "repository": "ext-regex",
       "scope": "deps-dev",
-      "subject": "flex-development/ext-regex@43ced89ca2404e855ab3aedddce445f4e9309ebf",
       "type": "revert",
       "user": null,
     },
@@ -36,8 +64,7 @@ Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.c
     "type": "revert",
   },
   {
-    "body": "Signed-off-by: dependabot[bot] <support@github.com>
-Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+    "body": "Signed-off-by: Lexus Drumgold <unicornware@flexdevelopment.llc>",
     "breaking": null,
     "committerDate": "2023-02-18 21:58:00 +0000",
     "footer": null,
@@ -46,8 +73,7 @@ Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.c
     "header": "revert(deps-dev): flexdevelopment@ff495037a1a5537bf386530ca540c4c073b47c79",
     "mentions": [
       "ff495037a1a5537bf386530ca540c4c073b47c79",
-      "github",
-      "users",
+      "flexdevelopment",
     ],
     "merge": null,
     "notes": [],
@@ -59,7 +85,6 @@ Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.c
       "owner": null,
       "repository": null,
       "scope": "deps-dev",
-      "subject": "flexdevelopment@ff495037a1a5537bf386530ca540c4c073b47c79",
       "type": "revert",
       "user": "flexdevelopment",
     },
@@ -89,7 +114,6 @@ Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.c
       "owner": null,
       "repository": null,
       "scope": null,
-      "subject": "be8b47e536c91bb0940b7bcfb0aae9cd53f794bd",
       "type": "revert",
       "user": null,
     },
