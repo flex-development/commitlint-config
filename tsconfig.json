@@ -6,6 +6,7 @@
     "alwaysStrict": false,
     "baseUrl": ".",
     "checkJs": false,
+    "customConditions": ["import", "node"],
     "declaration": false,
     "declarationMap": false,
     "emitDecoratorMetadata": false,
@@ -31,8 +32,7 @@
       "#fixtures/*": ["__fixtures__/*"],
       "#src": ["src/index"],
       "#src/*": ["src/*"],
-      "#tests/*": ["__tests__/*"],
-      "@flex-development/commitlint-config": ["src/index"]
+      "#tests/*": ["__tests__/*"]
     },
     "preserveConstEnums": true,
     "preserveSymlinks": false,
@@ -53,5 +53,6 @@
     "verbatimModuleSyntax": true
   },
   "exclude": ["**/coverage", "**/dist", "**/node_modules"],
-  "include": ["**/**.cjs", "**/**.mjs", "**/**.mts", "**/**.ts", "**/.*.cjs"]
+  "include": ["**/**.mjs", "**/**.mts", "**/**.ts"],
+  "references": [{ "path": "./tsconfig.cjs.json" }]
 }

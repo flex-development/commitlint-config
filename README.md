@@ -17,6 +17,7 @@ Shareable [`commitlint`][1] config enforcing [conventional commits][2]
 - [When should I use this?](#when-should-i-use-this)
 - [Install](#install)
 - [Use](#use)
+  - [Customizing scopes and types](#customizing-scopes-and-types)
 - [API](#api)
 - [Types](#types)
   - [Enums](#enums)
@@ -57,7 +58,51 @@ yarn add -D @flex-development/commitlint-config@flex-development/commitlint-conf
 
 ## Use
 
-**TODO**: usage example.
+```sh
+echo '{\n  "extends": "@flex-development"\n}' > .commitlintrc.json
+commitlint --from HEAD~1 --to HEAD --verbose
+```
+
+### Customizing scopes and types
+
+Due to [an unresolved `commitlint` issue][7], extended `commitlint` configurations do not concatenate [`scope-enum`][8],
+nor [`type-enum`][9]. Follow the example below to customize commit scopes and types losslessly.
+
+```sh
+touch .commitlintrc.cts
+```
+
+```ts
+/**
+ * @file Configuration - commitlint
+ * @module config/commitlint
+ * @see https://commitlint.js.org
+ */
+
+import {
+  RuleConfigSeverity as Severity,
+  type UserConfig
+} from '@commitlint/types'
+import { scopes } from '@flex-development/commitlint-config'
+
+/**
+ * `commitlint` configuration object.
+ *
+ * @const {UserConfig} config
+ */
+const config: UserConfig = {
+  extends: ['@flex-development'],
+  rules: {
+    'scope-enum': [Severity.Error, 'always', scopes(['bundle', 'transpile'])]
+  }
+}
+
+export default config
+```
+
+You may need to set [`TS_NODE_PROJECT`][10] if running `commitlint` from the command line.
+
+See [`docs/examples/commitlint.config.cjs`](docs/examples/commitlint.config.cjs) for an example config written in pure CommonJS.
 
 ## API
 
@@ -65,7 +110,7 @@ yarn add -D @flex-development/commitlint-config@flex-development/commitlint-conf
 
 ## Types
 
-This package is fully typed with [TypeScript][7].
+This package is fully typed with [TypeScript][11].
 
 ### Enums
 
@@ -103,4 +148,8 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 [4]: https://commitlint.js.org/#/guides-use-prompt
 [5]: https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog
 [6]: https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-commits-parser
-[7]: https://www.typescriptlang.org
+[7]: https://github.com/conventional-changelog/commitlint/issues/528
+[8]: https://commitlint.js.org/#/reference-rules?id=scope-enum
+[9]: https://commitlint.js.org/#/reference-rules?id=type-enum
+[10]: https://typestrong.org/ts-node/docs/options#project
+[11]: https://www.typescriptlang.org
