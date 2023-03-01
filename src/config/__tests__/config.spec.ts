@@ -33,8 +33,8 @@ describe('unit:config/config', () => {
   })
 
   describe('ignores', () => {
-    it('should not set additional ignore rules', () => {
-      expect(TEST_SUBJECT.ignores).to.be.an('array').of.length(0)
+    it('should set additional ignore rules', () => {
+      expect(TEST_SUBJECT.ignores).to.be.an('array').of.length(1)
     })
   })
 
