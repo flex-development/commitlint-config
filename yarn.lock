@@ -1183,7 +1183,7 @@ __metadata:
     "@vates/toggle-scripts": "npm:1.0.0"
     "@vitest/coverage-c8": "npm:0.29.1"
     "@vitest/expect": "npm:0.29.1"
-    "@vitest/ui": "npm:0.29.1"
+    "@vitest/ui": "npm:0.29.2"
     add-stream: "npm:1.0.0"
     chai: "npm:4.3.7"
     consola: "npm:2.15.3"
@@ -2423,16 +2423,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/ui@npm:0.29.1":
-  version: 0.29.1
-  resolution: "@vitest/ui@npm:0.29.1"
+"@vitest/ui@npm:0.29.2":
+  version: 0.29.2
+  resolution: "@vitest/ui@npm:0.29.2"
   dependencies:
     fast-glob: "npm:^3.2.12"
     flatted: "npm:^3.2.7"
     pathe: "npm:^1.1.0"
     picocolors: "npm:^1.0.0"
     sirv: "npm:^2.0.2"
-  checksum: 235c5efba177b2787b1efab9394b96b827f37392c22a39211267a91063e95d0589ce28ff16e361185f70a4b356c20f1e779e513dbf516c7d6584a54900002f51
+  checksum: 403db772a4f0e5c35c0002c7c0a2512832da895b9942a4d37ea06cfbc500ff2db533383e09ab1cadb63fc455655991426cab6e4ad24eda6a30a44eb937caa08a
   languageName: node
   linkType: hard
 
