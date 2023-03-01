@@ -6,10 +6,6 @@
 import type TestSubject from '../note-keyword'
 
 describe('unit-d:types/NoteKeyword', () => {
-  it('should extract "BREAKING CHANGE"', () => {
-    expectTypeOf<TestSubject>().extract('BREAKING CHANGE').toBeString()
-  })
-
   it('should extract "BREAKING-CHANGE"', () => {
     expectTypeOf<TestSubject>().extract('BREAKING-CHANGE').toBeString()
   })

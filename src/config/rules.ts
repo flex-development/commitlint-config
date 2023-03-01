@@ -42,7 +42,7 @@ const rules: RulesConfig = {
   'scope-enum': [Severity.Error, 'always', scopes()],
   'scope-max-length': [Severity.Error, 'always', max(scopes())],
   'scope-min-length': [Severity.Error, 'always', min(scopes())],
-  'signed-off-by': [Severity.Error, 'always', 'Signed-off-by:'],
+  'signed-off-by': [Severity.Disabled],
   'subject-case': [Severity.Disabled],
   'subject-empty': [Severity.Error, 'never'],
   'subject-exclamation-mark': [Severity.Disabled],

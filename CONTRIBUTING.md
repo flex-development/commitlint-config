@@ -168,7 +168,7 @@ This means every commit must conform to the following format:
 
 [body]
 
-[BREAKING CHANGE: <change>]
+[BREAKING-CHANGE: <change>]
 
 [footer(s)]
 ```

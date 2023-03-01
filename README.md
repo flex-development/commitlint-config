@@ -33,7 +33,6 @@ Shareable [`commitlint`][1] config enforcing [conventional commits][2]
     - [`scope-enum`](#scope-enum)
     - [`scope-max-length`](#scope-max-length)
     - [`scope-min-length`](#scope-min-length)
-    - [`signed-off-by`](#signed-off-by)
     - [`subject-empty`](#subject-empty)
     - [`subject-full-stop`](#subject-full-stop)
     - [`subject-min-length`](#subject-min-length)
@@ -269,16 +268,6 @@ code when not met.
 
   ```ts
   min(scopes())
-  ```
-
-#### `signed-off-by`
-
-- **condition**: `message` has `value`
-- **rule**: `always`
-- **value**:
-
-  ```ts
-  'Signed-off-by:'
   ```
 
 #### `subject-empty`

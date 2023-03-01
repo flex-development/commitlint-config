@@ -29,7 +29,7 @@ const parserPreset: ParserPreset = {
     issuePrefixesCaseSensitive: true,
     mergeCorrespondence: null,
     mergePattern: null,
-    noteKeywords: ['BREAKING CHANGE', 'BREAKING-CHANGE'],
+    noteKeywords: ['BREAKING-CHANGE'],
     referenceActions: Object.values(ReferenceAction),
     revertCorrespondence: [
       'type',

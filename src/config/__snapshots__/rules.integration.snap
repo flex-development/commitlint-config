@@ -123,23 +123,6 @@ exports[`integration:config/rules > @commitlint/lint > scope-min-length > should
 ]
 `;
 
-exports[`integration:config/rules > @commitlint/lint > signed-off-by > should error without sign off 1`] = `
-[
-  {
-    "level": 2,
-    "message": "message must be signed off",
-    "name": "signed-off-by",
-    "valid": false,
-  },
-  {
-    "level": 2,
-    "message": "message must have \`Signed-off-by:\` trailer",
-    "name": "trailer-exists",
-    "valid": false,
-  },
-]
-`;
-
 exports[`integration:config/rules > @commitlint/lint > subject-empty > should error on missing subject 1`] = `
 [
   {
@@ -187,12 +170,6 @@ exports[`integration:config/rules > @commitlint/lint > subject-min-length > shou
 
 exports[`integration:config/rules > @commitlint/lint > trailer-exists > should error on missing "Signed-off-by" trailer 1`] = `
 [
-  {
-    "level": 2,
-    "message": "message must be signed off",
-    "name": "signed-off-by",
-    "valid": false,
-  },
   {
     "level": 2,
     "message": "message must have \`Signed-off-by:\` trailer",

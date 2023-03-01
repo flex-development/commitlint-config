@@ -145,7 +145,7 @@ describe('integration:config/rules', () => {
       it('should error if footer comes after 1 new line', async () => {
         // Arrange
         const commit: string =
-          'test: some message\n\nbody\nBREAKING CHANGE: It will be significant'
+          'test: some message\n\nbody\nBREAKING-CHANGE: It will be significant'
 
         // Act
         const result = await linter(signoff(commit, 0))
@@ -355,26 +355,8 @@ describe('integration:config/rules', () => {
     })
 
     describe('signed-off-by', () => {
-      let rule: string
-      let severity: Severity
-
-      beforeAll(() => {
-        rule = 'signed-off-by'
-        severity = Severity.Error
-      })
-
-      it('should error without sign off', async () => {
-        // Arrange
-        const commit: string =
-          'chore(tests): [codecov] label critical files\n\n- https://docs.codecov.com/docs/manual-critical-file-labelling'
-
-        // Act
-        const result = await linter(commit)
-
-        // Expect
-        expect(result.errors).to.have.ruleOutcome(rule, severity)
-        expect(result.warnings).to.be.an('array').that.is.empty
-        expect(result.errors).toMatchSnapshot()
+      it('should be disabled', () => {
+        expect(testSubject['body-case']).to.be.level(Severity.Disabled)
       })
     })
 

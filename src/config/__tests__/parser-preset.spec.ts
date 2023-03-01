@@ -226,8 +226,8 @@ describe('unit:config/parserPreset', () => {
         subject = testSubject.parserOpts.noteKeywords
       })
 
-      it('should only contain 2 keywords', () => {
-        expect(subject).to.deep.equal(['BREAKING CHANGE', 'BREAKING-CHANGE'])
+      it('should only contain 1 keyword', () => {
+        expect(subject).to.deep.equal(['BREAKING-CHANGE'])
       })
     })
 
