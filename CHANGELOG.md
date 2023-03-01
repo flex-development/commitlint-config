@@ -1,3 +1,23 @@
+## [1.0.1](https://github.com/flex-development/commitlint-config/compare/1.0.0...1.0.1) (2023-03-01)
+
+
+### :package: Build
+
+* **deps-dev:** Bump @vitest/coverage-c8 from 0.29.1 to 0.29.2 ([#19](https://github.com/flex-development/commitlint-config/issues/19)) ([27251af](https://github.com/flex-development/commitlint-config/commit/27251af2fffe89e6ab6876faa654223b247ac11d))
+* **deps-dev:** Bump @vitest/expect from 0.29.1 to 0.29.2 ([#18](https://github.com/flex-development/commitlint-config/issues/18)) ([d70cd17](https://github.com/flex-development/commitlint-config/commit/d70cd17de10414b3d45e8553465b4a077a2844cd))
+* **deps-dev:** Bump @vitest/ui from 0.29.1 to 0.29.2 ([#17](https://github.com/flex-development/commitlint-config/issues/17)) ([7fc01fd](https://github.com/flex-development/commitlint-config/commit/7fc01fdbd17e872b3d8726e0c3e613be94bca6bc))
+* **deps-dev:** Bump vitest from 0.29.1 to 0.29.2 ([#16](https://github.com/flex-development/commitlint-config/issues/16)) ([643ed89](https://github.com/flex-development/commitlint-config/commit/643ed89e279b7d3f7fedd678077262470700409e))
+
+
+### :bug: Fixes
+
+* **config:** ignore [@dependabot](https://github.com/dependabot) commits ([ac180de](https://github.com/flex-development/commitlint-config/commit/ac180def55e902d0017c719c849d810f98ea66de))
+
+
+### :mechanical_arm: Refactors
+
+* **config:** [rules] prefer `trailer-exists` over `signed-off-by` ([135d3eb](https://github.com/flex-development/commitlint-config/commit/135d3ebad9ad3a74245746bebcf8069d2978fa95))
+
 ## 1.0.0 (2023-02-28)
 
 
