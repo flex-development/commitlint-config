@@ -1,5 +1,6 @@
 # commitlint-config
 
+[![github release](https://img.shields.io/github/v/release/flex-development/commitlint-config.svg?include_prereleases&sort=semver)](https://github.com/flex-development/commitlint-config/releases/latest)
 [![npm](https://img.shields.io/npm/v/@flex-development/commitlint-config.svg)](https://npmjs.com/package/@flex-development/commitlint-config)
 [![codecov](https://codecov.io/gh/flex-development/commitlint-config/branch/main/graph/badge.svg?token=hJhCIS5UIM)](https://codecov.io/gh/flex-development/commitlint-config)
 [![module type: cjs+esm](https://img.shields.io/badge/module%20type-cjs%2Besm-brightgreen)](https://github.com/voxpelli/badges-cjs-esm)
