@@ -89,7 +89,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "17.6.3",
-    "@commitlint/lint": "17.6.1",
+    "@commitlint/lint": "17.6.3",
     "@flex-development/decorator-regex": "1.0.0",
     "@flex-development/esm-types": "1.0.0",
     "@flex-development/ext-regex": "1.0.0",
