@@ -260,7 +260,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/is-ignored@npm:^17.4.4, @commitlint/is-ignored@npm:^17.6.3":
+"@commitlint/is-ignored@npm:^17.6.3":
   version: 17.6.3
   resolution: "@commitlint/is-ignored@npm:17.6.3"
   dependencies:
@@ -270,19 +270,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/lint@npm:17.6.1":
-  version: 17.6.1
-  resolution: "@commitlint/lint@npm:17.6.1"
-  dependencies:
-    "@commitlint/is-ignored": "npm:^17.4.4"
-    "@commitlint/parse": "npm:^17.4.4"
-    "@commitlint/rules": "npm:^17.6.1"
-    "@commitlint/types": "npm:^17.4.4"
-  checksum: 03f3a32dc778459cc302925f1d97957b789ab197cf2db482b782ebad408fa97132230ab656dee754e75e8c5b170eebb3105ef43d08efc79a4ce7c6d41069e310
-  languageName: node
-  linkType: hard
-
-"@commitlint/lint@npm:^17.6.3":
+"@commitlint/lint@npm:17.6.3, @commitlint/lint@npm:^17.6.3":
   version: 17.6.3
   resolution: "@commitlint/lint@npm:17.6.3"
   dependencies:
@@ -1040,7 +1028,7 @@ __metadata:
   resolution: "@flex-development/commitlint-config@workspace:."
   dependencies:
     "@commitlint/cli": "npm:17.6.3"
-    "@commitlint/lint": "npm:17.6.1"
+    "@commitlint/lint": "npm:17.6.3"
     "@commitlint/types": "npm:17.4.4"
     "@flex-development/decorator-regex": "npm:1.0.0"
     "@flex-development/esm-types": "npm:1.0.0"
