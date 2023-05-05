@@ -88,7 +88,7 @@
     "conventional-changelog-conventionalcommits": "5.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.6.1",
+    "@commitlint/cli": "17.6.3",
     "@commitlint/lint": "17.6.1",
     "@flex-development/decorator-regex": "1.0.0",
     "@flex-development/esm-types": "1.0.0",
