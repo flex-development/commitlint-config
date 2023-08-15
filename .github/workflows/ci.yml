@@ -70,7 +70,7 @@ jobs:
           ref: ${{ env.REF }}
       - id: node
         name: Setup Node.js
-        uses: actions/setup-node@v3.7.0
+        uses: actions/setup-node@v3.8.0
         with:
           cache: yarn
           cache-dependency-path: yarn.lock
@@ -103,7 +103,7 @@ jobs:
           ref: ${{ env.REF }}
       - id: node
         name: Setup Node.js
-        uses: actions/setup-node@v3.7.0
+        uses: actions/setup-node@v3.8.0
         with:
           cache: yarn
           cache-dependency-path: yarn.lock
@@ -157,7 +157,7 @@ jobs:
           ref: ${{ env.REF }}
       - id: node
         name: Setup Node.js
-        uses: actions/setup-node@v3.7.0
+        uses: actions/setup-node@v3.8.0
         with:
           cache: yarn
           cache-dependency-path: yarn.lock
@@ -185,7 +185,7 @@ jobs:
           ref: ${{ env.REF }}
       - id: node
         name: Setup Node.js
-        uses: actions/setup-node@v3.7.0
+        uses: actions/setup-node@v3.8.0
         with:
           cache: yarn
           cache-dependency-path: yarn.lock
@@ -216,7 +216,7 @@ jobs:
           ref: ${{ env.REF }}
       - id: node
         name: Setup Node.js
-        uses: actions/setup-node@v3.7.0
+        uses: actions/setup-node@v3.8.0
         with:
           cache: yarn
           cache-dependency-path: yarn.lock
@@ -258,7 +258,7 @@ jobs:
       - id: node
         if: steps.test-files-check.outputs.files_exists == 'true'
         name: Setup Node.js
-        uses: actions/setup-node@v3.7.0
+        uses: actions/setup-node@v3.8.0
         with:
           cache: yarn
           cache-dependency-path: yarn.lock
@@ -319,7 +319,7 @@ jobs:
       - id: node
         if: steps.test-files-check.outputs.files_exists == 'true'
         name: Setup Node.js v${{ matrix.node-version }}
-        uses: actions/setup-node@v3.7.0
+        uses: actions/setup-node@v3.8.0
         with:
           cache: yarn
           cache-dependency-path: yarn.lock
@@ -371,7 +371,7 @@ jobs:
           ref: ${{ env.REF }}
       - id: node
         name: Setup Node.js
-        uses: actions/setup-node@v3.7.0
+        uses: actions/setup-node@v3.8.0
         with:
           cache: yarn
           cache-dependency-path: yarn.lock
